@@ -1,0 +1,23 @@
+
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>Delete Page</title>
+{% endblock %}
+ 
+
+
+{% block content %}
+    <h1>
+        All POSTS
+    </h1>
+
+    <h1>Edit Post</h1>
+    <h1>Are you sure you want to delete "{{ post.title }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete</button>
+    </form>
+    <p><a href="{% url 'home_url' %}">Back to Home</a></p>
+    
+{% endblock %}

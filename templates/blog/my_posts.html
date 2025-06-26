@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>My Posts</title>
+{% endblock %}
+ 
+
+
+{% block content %}
+    <h1>
+        My Posts
+    </h1>
+
+    {% for i in posts %}
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+           <a href="{% url 'blog_details_url' i.id %}" class="btn btn-primary btn-lg">{{i.title}}</a><br><br>
+
+           <a href="{% url 'edit_post' i.id %}" class="btn btn-outline-warning btn-sm">Update</a>
+           <a href="{% url 'delete_post' i.id %}" class="btn btn-outline-danger btn-sm">Delete</a>
+        </div>
+      </div>
+      <br>
+    {% endfor %}
+    
+{% endblock %}

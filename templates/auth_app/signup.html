@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+    <title>Blog Deatils Page</title>
+{% endblock %}
+ 
+
+
+{% block content %}
+<br>
+<div class="container border">
+    <h1><u>USER REGISTRATION</u></h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form | crispy}}
+        
+        <input type="submit" value="Register" class="btn btn-outline-success col-5">
+    </form>
+    
+    
+{% endblock %}

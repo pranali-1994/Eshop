@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+    <title>Blog Deatils Page</title>
+{% endblock %}
+ 
+
+
+{% block content %}
+<div class="container ">
+    <h1>Blog </h1>
+    <div class="card" style="width: 18rem;">
+       
+        <div class="card-body">
+          <h5 class="card-title">Title-{{blog_post.title}}</h5>
+          <p class="card-text">{{blog_post.body}}</p>
+          <p class="card-text">author:  {{blog_post.author}}</p>
+          <p class="card-text">posted at-{{blog_post.posted_at}}</p>
+        </div>
+      </div>
+    
+</div>
+    
+{% endblock %}
