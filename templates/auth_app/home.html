@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+    <title>Blog Deatils Page</title>
+{% endblock %}
+ 
+
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <br><br>
+    <div class="container-sm border border-secondary">
+        <h1>Login Form</h1>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">UserName</label>
+      <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    
+    <button type="reset" class="btn btn-warning col-5 float-left btn-lg">Reset</button>
+    <button type="submit" class="btn btn-success col-5 float-end btn-lg">Submit</button>
+
+</div>
+  </form>
+    
+{% endblock %}
